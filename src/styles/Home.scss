@@ -31,10 +31,13 @@ button:hover {
     border: none;
   }
 
+  button:hover {
+    transform: scale(1.1);
+  }
   .main-div {
     position: relative;
     margin: 10px;
-    background-color: transparent;
+    background: none;
     z-index: 10;
   }
 
