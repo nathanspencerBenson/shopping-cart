@@ -1,16 +1,20 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.scss';
-import { motion } from 'framer-motion';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Shop from './components/Shop';
 
 function App() {
   return (
-    <div className="App">
-      <motion.div animate={{ rotate: 360 }}
-    transition={{ duration: 2 }}>
-        <h1>Hello</h1>
-      </motion.div>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/shop" component={Shop} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
